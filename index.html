@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Solar System</title>
+  <link rel="stylesheet" href="Assets/CSS/style.css">
+</head>
+<body>
+  <div class="controls">
+    <button onclick="zoom(1.2)">Zoom In</button>
+    <button onclick="zoom(0.8)">Zoom Out</button>
+    <button onclick="resetZoom()">Reset</button>
+  </div>
+  <div class="space" id="space">
+    <div class="sun"></div>
+
+    <!-- Orbits & Planets -->
+    <div class="orbit" style="width: 150px; height: 150px;">
+      <div class="planet mercury" id="mercury"><div class="label">Mercury</div></div>
+    </div>
+    <div class="orbit" style="width: 200px; height: 200px;">
+      <div class="planet venus" id="venus"><div class="label">Venus</div></div>
+    </div>
+    <div class="orbit" style="width: 270px; height: 270px;">
+      <div class="planet earth" id="earth">
+        <div class="label">Earth</div>
+        <div class="moon" id="moon"></div>
+      </div>
+    </div>
+    <div class="orbit" style="width: 340px; height: 340px;">
+      <div class="planet mars" id="mars"><div class="label">Mars</div></div>
+    </div>
+    <div class="orbit" style="width: 430px; height: 430px;">
+      <div class="planet jupiter" id="jupiter"><div class="label">Jupiter</div></div>
+    </div>
+    <div class="orbit" style="width: 520px; height: 520px;">
+      <div class="planet saturn" id="saturn"><div class="label">Saturn</div></div>
+    </div>
+    <div class="orbit" style="width: 610px; height: 610px;">
+      <div class="planet uranus" id="uranus"><div class="label">Uranus</div></div>
+    </div>
+    <div class="orbit" style="width: 700px; height: 700px;">
+      <div class="planet neptune" id="neptune"><div class="label">Neptune</div></div>
+    </div>
+    <div class="orbit" style="width: 760px; height: 760px;">
+      <div class="planet pluto" id="pluto"><div class="label">Pluto</div></div>
+    </div>
+  </div>
+  <script src="Assets/JS/script.js"></script>
+</body>
+</html>
