@@ -1,0 +1,110 @@
+    body {
+      margin: 0;
+      overflow: hidden;
+      background-color: black;
+    }
+
+    .space {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      transform: scale(1);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .sun {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 120px;
+      height: 120px;
+      margin-left: -60px;
+      margin-top: -60px;
+      background: radial-gradient(circle, #fff700, #ff8c00, #cc0000);
+      border-radius: 50%;
+      box-shadow: 0 0 60px #ff8c00, 0 0 100px #ff4500 inset;
+      z-index: 10;
+    }
+
+    .orbit {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border: 1px dashed rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .planet {
+      position: absolute;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+    }
+
+    .label {
+      position: absolute;
+      color: white;
+      font-size: 12px;
+      transform: translate(-50%, -150%);
+      white-space: nowrap;
+    }
+
+    .moon {
+      width: 8px;
+      height: 8px;
+      background: #ccc;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    .mercury { width: 18px; height: 18px; background: #bbb; }
+    .venus   { width: 24px; height: 24px; background: #d2b48c; }
+    .earth   { width: 30px; height: 30px; background: #3c9eff; }
+    .mars    { width: 22px; height: 22px; background: #d14b00; }
+    .jupiter { width: 50px; height: 50px; background: #cba27e; }
+    .saturn  { width: 46px; height: 46px; background: #ecd9a2; position: relative; }
+    .uranus  { width: 38px; height: 38px; background: #94f3f9; }
+    .neptune { width: 36px; height: 36px; background: #5c8aff; }
+    .pluto   { width: 12px; height: 12px; background: #c0c0c0; }
+
+    .saturn::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70px;
+      height: 70px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      z-index: -1;
+    }
+
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: twinkle 2s infinite alternate;
+    }
+
+    @keyframes twinkle {
+      from { opacity: 0.3; }
+      to   { opacity: 1; }
+    }
+
+    .controls {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 999;
+    }
+    .controls button {
+      margin: 0 5px;
+      padding: 6px 12px;
+      font-size: 14px;
+    }
